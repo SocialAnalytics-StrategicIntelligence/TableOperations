@@ -8907,7 +8907,7 @@ a.anchor-link {
 <span class="n">changes</span><span class="o">=</span><span class="p">{</span><span class="s2">"CABO VERDE"</span><span class="p">:</span> <span class="s2">"CAPE VERDE"</span><span class="p">,</span><span class="s2">"CÔTE D'IVOIRE"</span><span class="p">:</span><span class="s2">"COTE D'IVOIRE"</span><span class="p">,</span> 
 <span class="s2">"CZECHIA"</span><span class="p">:</span><span class="s2">"CZECH REPUBLIC"</span><span class="p">,</span>
 <span class="s2">"SWAZILAND"</span><span class="p">:</span><span class="s2">"ESWATINI"</span><span class="p">,</span>
-<span class="s2">"ISRAEL AND WEST BANK"</span><span class="p">:</span><span class="s2">"ISRAEL"</span><span class="p">,</span>
+<span class="s2">"ISRAEL AND WEST BANK"</span><span class="p">:</span><span class="s2">"PALESTINE"</span><span class="p">,</span>
 <span class="s2">"KYRGYZSTAN"</span><span class="p">:</span><span class="s2">"KYRGYZ REPUBLIC"</span><span class="p">,</span>
 <span class="s2">"NORTH MACEDONIA"</span><span class="p">:</span><span class="s2">"MACEDONIA"</span><span class="p">,</span>
 <span class="s2">"SLOVAKIA"</span><span class="p">:</span> <span class="s2">"SLOVAK REPUBLIC"</span><span class="p">}</span>
@@ -8950,7 +8950,7 @@ a.anchor-link {
             <span class="n">rename_axis</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 
 <span class="c1"># verify missing</span>
-<span class="n">fragileWide</span><span class="p">[</span><span class="n">fragileWide</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span> <span class="c1"># remember you had an extra country</span>
+<span class="n">fragileWide</span><span class="p">[</span><span class="n">fragileWide</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span> 
 </pre></div>
 </div>
 </div>
@@ -8965,7 +8965,35 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># new subset</span>
-<span class="n">allDFsConcat</span><span class="o">=</span><span class="n">allDFsConcat</span><span class="p">[</span><span class="n">allDFsConcat</span><span class="o">.</span><span class="n">Year</span><span class="o">&gt;=</span><span class="mi">2012</span><span class="p">]</span>
+<span class="n">allDFsConcat</span><span class="o">=</span><span class="n">allDFsConcat</span><span class="p">[</span><span class="n">allDFsConcat</span><span class="o">.</span><span class="n">Year</span><span class="o">&gt;=</span><span class="mi">2013</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=1955bd5f-e3e8-47ee-bfe1-3f7e55fdd426">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFsConcat</span><span class="p">[</span><span class="n">allDFsConcat</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=abe74092-5a93-4b4c-89f4-55eb903e2d47">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFsConcat</span><span class="p">[</span><span class="n">allDFsConcat</span><span class="o">.</span><span class="n">Country</span><span class="o">==</span><span class="s1">'PALESTINE'</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -8979,7 +9007,70 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFsConcat</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFsConcat</span><span class="p">[</span><span class="n">allDFsConcat</span><span class="o">.</span><span class="n">Country</span><span class="o">==</span><span class="s1">'ISRAEL'</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c81fa521-f2b3-48b9-a808-6a73fd1263f7">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFsConcat</span><span class="p">[</span><span class="n">allDFsConcat</span><span class="o">.</span><span class="n">Country</span><span class="o">==</span><span class="s1">'ISRAEL'</span><span class="p">]</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">'records'</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f93fe02f-c316-4f51-9801-adaf396a1f28">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">newYears</span><span class="o">=</span><span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2013</span><span class="p">,</span><span class="mi">2021</span><span class="p">):</span>
+    <span class="n">base</span><span class="o">=</span><span class="n">allDFsConcat</span><span class="p">[</span><span class="n">allDFsConcat</span><span class="o">.</span><span class="n">Country</span><span class="o">==</span><span class="s1">'ISRAEL'</span><span class="p">]</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">'records'</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">base</span><span class="p">[</span><span class="s1">'Year'</span><span class="p">]</span><span class="o">=</span><span class="n">year</span>
+    <span class="n">newYears</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">newYears</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5b8d94ac-dd92-4d35-b080-5eef6a2afb6b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">allDFsConcat</span><span class="p">,</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">newYears</span><span class="p">)],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4cf5b8ad-1a86-4e5b-b36f-c6f5292dd1c9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFsConcat</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">allDFsConcat</span><span class="p">,</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">newYears</span><span class="p">)],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9478,7 +9569,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># second iteration</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># second iteration (manual)</span>
 
 <span class="n">changesInCodes2</span><span class="o">=</span><span class="p">{</span><span class="s2">"KOREA (THE DEMOCRATIC PEOPLE'S REPUBLIC OF) [P]"</span><span class="p">:</span><span class="s1">'NORTH KOREA'</span><span class="p">,</span>
                  <span class="s2">"KOREA (THE REPUBLIC OF) [Q]"</span><span class="p">:</span><span class="s2">"SOUTH KOREA"</span><span class="p">,</span>
@@ -9794,6 +9885,20 @@ a.anchor-link {
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># the NA in NAmibia requires PKL:</span>
 <span class="n">fragilityCoded_2012_2023</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">"dataFiles"</span><span class="p">,</span><span class="s2">"fragility"</span><span class="p">,</span><span class="s2">"fragilityCoded_2012_2023.pkl"</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0ed1e042-31fb-488b-817a-1fcb7fbc230f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
